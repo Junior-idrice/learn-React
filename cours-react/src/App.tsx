@@ -1,31 +1,25 @@
-import type { ReactNode } from "react";
+import { useEffect,useState, type ReactNode } from "react";
 import CartUser from "./composants/CartUser";
 import Counter from "./composants/counter";
 
 const App = ()=>{
-  const users = [
-    {
-      id:1,
-      name:"idrice",
-      age: 10,
-    },
-     {
-      id:2,
-      name:"feujio",
-      age: 22,
-    }
-  ]
+  const [count, setCount] = useState(0)
+
+  useEffect(()=>{
+    document.title = `the count is ${count}`
+  }, [count])
   return (
-    <>
-      <h1>events in react</h1>
-      <Counter/>
-
-
-      {/*users.map(element =>(
-        <CartUser user={element}/>
-      ))*/}
-      </>
-      )}
+    <div>
+      
+      <h2>Les effect</h2>
+      <div>
+        <button
+        onClick={()=> setCount(count +1)}>Icrease</button>
+      </div>
+      <h3>Voici la valeur du {count} </h3>
+    </div>
+  )
+}
     
 export default App
 /*
