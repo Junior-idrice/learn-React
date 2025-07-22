@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import CartUser from "./composants/CartUser";
+import Counter from "./composants/counter";
 
 const App = ()=>{
   const users = [
@@ -16,10 +17,13 @@ const App = ()=>{
   ]
   return (
     <>
-      <h1>Render a list</h1>
-      {users.map(element =>(
+      <h1>events in react</h1>
+      <Counter/>
+
+
+      {/*users.map(element =>(
         <CartUser user={element}/>
-      ))}
+      ))*/}
       </>
       )}
     
