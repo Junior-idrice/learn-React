@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>count</h1>
+    <button id="btn">Click me</button>
+    <button id="reset">reset</button>
+    <p id="count">count : 0</p>
+
+    <script>
+        let co = 0
+        let p = document.querySelector('#count')
+        const btn = document.querySelector("#btn")
+        btn.addEventListener('click', ()=>{
+            co +=1;
+            p.textContent = "count " + co
+        })
+
+        const btn1 = document.querySelector('#reset')
+        btn1.addEventListener('click', ()=>{
+            co= 0
+            p.textContent = "count: " + co
+        })
+    </script>
+</body>
+</html>
